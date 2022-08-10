@@ -1,21 +1,9 @@
-import {useState, useEffect} from 'react';
-import './App.css';
+import React from 'react';
 
 const App = () => {
-  /*HOOKS*/
-  /*State*/
-  const [counter, setCounter] = useState(0);
-  useEffect(() => {
-    setCounter(100);
-  }, []);
-
-  return (
-    <div className="App">
-      <button onClick={() => setCounter((prevCounter) => prevCounter - 1)}>-</button>
-      <h1>{counter}</h1>
-      <button onClick={() => setCounter((prevCounter) => prevCounter + 1)}>+</button>
-    </div>
-  );
+    return (
+        <h1>App</h1>
+    )
 }
 
 export default App;
