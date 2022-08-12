@@ -1,5 +1,6 @@
 import React from 'react';
 import {useEffect} from 'react';
+import MovieCard from './MovieCard';
 import './App.css';
 import SearchIcon from './search.svg';
 
@@ -43,7 +44,7 @@ const App = () => {
             </div>
 
             <div className='container'>
-
+                <MovieCard movie1={movie1}/>
             </div>
         </div>
     )
