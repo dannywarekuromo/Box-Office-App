@@ -19,46 +19,38 @@ const App = () => {
         const data = await response.json();
 
         setMovies(data.Search);
-    }
-    useEffect(() => {
-        searchMovies('James Bond');
-    }, []);
+    };
 
     return (
-        <div className='app'>
+        <div className="app">
             <h1>Box-Office</h1>
 
             <div className="search">
                 <input 
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
                     placeholder="Search the Box Office"
-                    value="Superman"
-                    onChange={() => {}}
                 />
                 <img
                     src={SearchIcon}
                     alt="search"
-                    onClick={() => {}}
+                    onClick={() => searchMovies(searchTerm)}
                 />
             </div>
 
-            {
-                movies?.length > 0
-                ? (
+            {movies?.length > 0 ? (
                     <div className='container'>
-                        {movies.map((movie) => {
+                        {movies.map((movie) => (
                             <MovieCard movie={movie}/>
-                        })}
+                        ))}
                     </div>
                 ) : (
                     <div className='empty'>
                         <h2>No Movies Found</h2>
                     </div>
-                )
-            }
-
-
+                )}
         </div>
-    )
-}
+    );
+};
 
 export default App;
