@@ -46,7 +46,7 @@ const App = () => {
                     </div>
                 ) : (
                     <div className='empty'>
-                        <h2>No Movies Found</h2>
+                        <h2>You are offline.</h2>
                     </div>
                 )}
         </div>
